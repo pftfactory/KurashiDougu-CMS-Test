@@ -1,6 +1,15 @@
+---
+---
+
 # 暮らしの小さな困りごと
 
 日常の中で、見過ごされやすい小さな困りごとを集めています。
 
-- [テスト記事001](./docs/2026-09-19-001.html)
-- [テスト002](./docs/2026-09-19-002.html)
+<ul>
+{% assign articles = site.pages | where_exp: "p", "p.path contains 'docs/'" | sort: "path" | reverse %}
+{% for article in articles %}
+  {% if article.title %}
+    <li><a href="{{ article.url | relative_url }}">{{ article.title }}</a></li>
+  {% endif %}
+{% endfor %}
+</ul>
