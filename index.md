@@ -19,7 +19,7 @@
 
 {% for group in groups %}
 {% unless group.name == "/docs/" %}
-{% assign folder_name = group.name | remove_first: "/docs/" | remove: "/" %}
+{% assign folder_name = group.name | url_decode | remove_first: "/docs/" | remove: "/" %}
 
 ## {{ folder_name }}
 
