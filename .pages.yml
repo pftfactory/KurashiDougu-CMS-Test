@@ -1,7 +1,7 @@
 media: media
 content:
   - name: komarigoto
-    label: 暮らしの小さな困りごと
+    label: 困りごと
     type: collection
     path: docs
     operations:
